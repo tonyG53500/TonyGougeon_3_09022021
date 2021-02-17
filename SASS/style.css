@@ -90,6 +90,7 @@ span {
 
 .header .header__arrow {
   font-size: 1.8rem;
+  color: #000;
   position: absolute;
   margin-right: 95%;
   margin-left: 2rem;
@@ -362,6 +363,7 @@ span {
 }
 
 .restaurant .restaurant__cards .cards .cards__image {
+  position: relative;
   overflow: hidden;
   width: 100%;
   height: 17.5rem;
@@ -369,9 +371,32 @@ span {
 }
 
 .restaurant .restaurant__cards .cards .cards__image img {
+  position: absolute;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.restaurant .restaurant__cards .cards .cards__image p {
+  position: absolute;
+  z-index: 1;
+  top: 1.2rem;
+  right: 1.2rem;
+  color: #008766;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  background-color: #99E2D0;
+  width: 8rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .restaurant .restaurant__cards .cards .cards__description {
@@ -387,14 +412,14 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  line-height: 2rem;
 }
 
 .restaurant .restaurant__cards .cards .cards__description button {
   font-size: 2rem;
   background: #FFF;
   border: none;
-  color: #FFF;
-  -webkit-text-stroke: 0.5px black;
+  cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -403,7 +428,6 @@ span {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-text-stroke: 0.5px black;
 }
 
 .restaurant .restaurant__cards .cards:hover {
@@ -419,7 +443,151 @@ span {
 
 .image img {
   width: 100%;
+  height: 26.5rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f6f6f6;
+  border-radius: 4rem 4rem 0rem 0rem;
+  position: relative;
+  margin-top: -4rem;
+  padding-bottom: 8rem;
+  z-index: 1;
+}
+
+.menu .menu__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3.5rem 2rem;
+}
+
+.menu .menu__heading .btn__heart {
+  font-size: 2.2rem;
+  text-decoration: none;
+  border: none;
+  background-color: #f6f6f6;
+  margin-right: 1.5rem;
+}
+
+.menu .menu__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem;
+}
+
+.menu .menu__section .section__title {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.menu .menu__section .border__title {
+  width: 4rem;
+  height: 0.3rem;
+  background-color: #99E2D0;
+  margin-top: 0.7rem;
+}
+
+.menu .menu__section .section__cards {
+  width: 100%;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0px 0px 6px #9F9F9F;
+          box-shadow: 0px 0px 6px #9F9F9F;
+  margin-top: 1.4rem;
+  background-color: #FFF;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu .menu__section .section__cards:hover {
+  -webkit-box-shadow: 0px 0px 12px 3px #9F9F9F;
+          box-shadow: 0px 0px 12px 3px #9F9F9F;
+}
+
+.menu .menu__section .section__link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+}
+
+.menu .menu__section .section__link .description {
+  margin: 1rem 1.5rem;
+  line-height: 2rem;
+  width: 70%;
+}
+
+.menu .menu__section .section__link .price {
+  margin-top: 2rem;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu .menu__section .section__link .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99E2D0;
+  color: #FFF;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0 1.5rem 1.5rem 0;
+  font-size: 2rem;
+  position: relative;
+  margin-right: -6rem;
+}
+
+.menu .menu__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
