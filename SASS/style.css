@@ -558,17 +558,24 @@ span {
   line-height: 2rem;
 }
 
-.restaurant .restaurant__cards .cards .cards__description button {
-  font-size: 2rem;
+.restaurant .restaurant__cards .cards .cards__description .btn__heart {
   background: #FFF;
   border: none;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  font-size: 2rem;
+  color: white;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.restaurant .restaurant__cards .cards .cards__description button:hover {
+.restaurant .restaurant__cards .cards .cards__description .btn__heart:hover {
+  -webkit-text-stroke: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
+  font-size: 2.2rem;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -622,11 +629,26 @@ span {
 }
 
 .menu .menu__heading .btn__heart {
-  font-size: 2.2rem;
-  text-decoration: none;
+  background: #FFF;
   border: none;
-  background-color: #f6f6f6;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   margin-right: 1.5rem;
+}
+
+.menu .menu__heading .btn__heart:hover {
+  -webkit-text-stroke: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  font-size: 2.2rem;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .menu .menu__section {
