@@ -75,8 +75,6 @@ span {
 }
 
 .loader {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -93,7 +91,7 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(/PUBLIC/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background: url(../PUBLIC/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-size: cover;
   background-position: center;
   z-index: 2;
@@ -551,8 +549,41 @@ span {
   margin-bottom: 6rem;
 }
 
+@media screen and (min-width: 600px) {
+  .restaurant .restaurant__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .restaurant .restaurant__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .restaurant .restaurant__cards .cards__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .restaurant .restaurant__cards .cards__block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -561,6 +592,13 @@ span {
 
 .restaurant .restaurant__cards .cards__link {
   text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  .restaurant .restaurant__cards .cards__link {
+    width: 100%;
+    margin: 1rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -582,7 +620,6 @@ span {
 @media screen and (min-width: 1200px) {
   .restaurant .restaurant__cards .cards {
     width: 100%;
-    margin: 1rem;
   }
 }
 
@@ -649,6 +686,8 @@ span {
   -webkit-text-stroke-color: black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .restaurant .restaurant__cards .cards .cards__description .btn__heart:hover {
@@ -721,6 +760,8 @@ span {
   transition: 0.3s;
   margin-right: 1.5rem;
   background-color: #f6f6f6;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .menu .menu__heading .btn__heart:hover {
@@ -841,22 +882,33 @@ span {
 
 .menu .menu__section .section__link:hover > .price {
   padding-right: 80px;
+  width: 40%;
+}
+
+.menu .menu__section .section__link:hover > .description {
+  width: 60%;
 }
 
 .menu .menu__section .section__link .description {
   margin: 1rem 0rem 1rem 1.5rem;
   line-height: 2rem;
-  width: 50%;
+  width: 75%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.menu .menu__section .section__link .description h3, .menu .menu__section .section__link .description p {
+.menu .menu__section .section__link .description h3 {
+  white-space: nowrap;
+}
+
+.menu .menu__section .section__link .description p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .menu .menu__section .section__link .price {
-  width: 50%;
+  width: 25%;
   margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -865,8 +917,8 @@ span {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-transition: padding-right 0.3s;
-  transition: padding-right 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .menu .menu__section .section__link .check {
